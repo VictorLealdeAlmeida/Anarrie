@@ -22,7 +22,6 @@ class Obstacle: SKSpriteNode{
         super.init(coder: aDecoder)
     }
     
-    
 }
 
 class Cactus: Obstacle{
@@ -35,7 +34,5 @@ class Cactus: Obstacle{
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
-    
     
 }

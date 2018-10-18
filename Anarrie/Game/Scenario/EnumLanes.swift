@@ -18,3 +18,6 @@ enum ScaleNodeScenario: Double{
     case playerHeitgh = -0.35
     case obstacleBirth = 0.4 //Mudar
 }
+
+
+

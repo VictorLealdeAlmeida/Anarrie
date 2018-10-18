@@ -10,6 +10,8 @@ import SpriteKit
 
 class Player: SKSpriteNode{
     
+    var currentLane: LanesScale = .centerLane
+    
     init() {
         let texture = SKTexture(imageNamed: "lui1")
         let size = CGSize(width: 100, height: 100)
@@ -21,6 +23,10 @@ class Player: SKSpriteNode{
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    func changeLane(newLane: LanesScale) {
+        self.currentLane = newLane
     }
     
     

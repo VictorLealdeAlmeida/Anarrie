@@ -12,11 +12,11 @@ import SpriteKit
 
 extension SKNode{
     
-    func heightScreen() -> CGFloat{
+    private func heightScreen() -> CGFloat{
         return UIScreen.main.nativeBounds.height
     }
     
-    func widthScreen() -> CGFloat{
+    private func widthScreen() -> CGFloat{
         return  UIScreen.main.nativeBounds.width
     }
     

@@ -11,17 +11,53 @@ import GameplayKit
 
 class GameScene: SKScene {
     
+    var gameViewController: GameViewController!
+    let player = Player()
+    
     
     override func sceneDidLoad() {
         
-        let p = Player()
+        addChild(player)
         
-        addChild(p)
-        
-        let o = Cactus(laneStart: .centerLane)
+        let o = Cactus(laneStart: .leftLane)
     
         addChild(o)
+        
+        addChild(Cactus(laneStart: .rightLane))
+        
+ 
 
+    }
+    
+    
+    func movePlayerRight() {
+        
+        if player.currentLane == .leftLane {
+            player.changeLane(newLane: .centerLane)
+            player.run(SKAction.moveTo(x: scaleWidth(scale: LanesScale.centerLane.rawValue), duration: 0.5))
+        } else if player.currentLane == .centerLane {
+            player.changeLane(newLane: .rightLane)
+            player.run(SKAction.moveTo(x: scaleWidth(scale: LanesScale.rightLane.rawValue), duration: 0.5))
+
+        } else {
+            // do nothing
+        }
+        
+    }
+    
+    func movePlayerLeft() {
+        
+        if player.currentLane == .rightLane {
+            player.changeLane(newLane: .centerLane)
+            player.run(SKAction.moveTo(x: scaleWidth(scale: LanesScale.centerLane.rawValue), duration: 0.5))
+        } else if player.currentLane == .centerLane {
+            player.changeLane(newLane: .leftLane)
+            player.run(SKAction.moveTo(x: scaleWidth(scale: LanesScale.leftLane.rawValue), duration: 0.5))
+            
+        } else {
+            // do nothing
+        }
+        
     }
 
 }

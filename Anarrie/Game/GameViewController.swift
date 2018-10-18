@@ -12,17 +12,39 @@ import GameplayKit
 
 class GameViewController: UIViewController {
 
+    let gameScene = GameScene(fileNamed:"GameScene")
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         createScene()
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(movePlayerLeft))
+        swipeLeft.direction = .left
+        view.addGestureRecognizer(swipeLeft)
+        
+        
+        
+        let swipeRight:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(movePlayerRight))
+        swipeRight.direction = .right
+        view.addGestureRecognizer(swipeRight)
        
+    }
+    
+    @objc func movePlayerLeft(){
+        gameScene?.movePlayerLeft()
+    }
+    
+    @objc func movePlayerRight(){
+        gameScene?.movePlayerRight()
     }
 
     func createScene(){
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
-            let scene = GameScene(fileNamed:"GameScene")!
+            let scene = gameScene!
             scene.scaleMode = .aspectFill
+            scene.gameViewController = self
             
             view.presentScene(scene)
             
