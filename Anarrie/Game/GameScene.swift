@@ -15,7 +15,7 @@ class GameScene: SKScene {
     override func sceneDidLoad() {
         
         let p = Player()
-        print(p.name!)
+        
         addChild(p)
 
     }

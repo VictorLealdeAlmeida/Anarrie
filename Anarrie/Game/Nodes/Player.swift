@@ -10,7 +10,6 @@ import SpriteKit
 
 class Player: SKSpriteNode{
     
-
     
     init() {
         
@@ -19,7 +18,7 @@ class Player: SKSpriteNode{
         super.init(texture: texture, color: UIColor.clear, size: size)
         
         self.name = "player"
-        self.position = CGPoint(x: 0, y: 0)
+        self.position = CGPoint(x: widthCenter(), y: scaleHeight(scale: -0.3))
     }
     
     required init?(coder aDecoder: NSCoder) {
