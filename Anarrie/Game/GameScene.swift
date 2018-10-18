@@ -17,6 +17,10 @@ class GameScene: SKScene {
         let p = Player()
         
         addChild(p)
+        
+        let o = Cactus(laneStart: .centerLane)
+    
+        addChild(o)
 
     }
 

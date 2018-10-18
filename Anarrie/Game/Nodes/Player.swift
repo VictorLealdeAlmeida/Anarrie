@@ -10,9 +10,7 @@ import SpriteKit
 
 class Player: SKSpriteNode{
     
-    
     init() {
-        
         let texture = SKTexture(imageNamed: "lui1")
         let size = CGSize(width: 100, height: 100)
         super.init(texture: texture, color: UIColor.clear, size: size)

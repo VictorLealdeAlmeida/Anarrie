@@ -8,10 +8,10 @@
 
 import Foundation
 
-enum PhysicsCategory {
-    static let None           : UInt32 = 0
-    static let Player         : UInt32 = 0b0
-    static let Obstacle       : UInt32 = 0b1
-    static let Coin           : UInt32 = 0b10
+enum PhysicsCategory: UInt32 {
+    case None           = 0
+    case Player         = 0b01
+    case Obstacle       = 0b10
+    case Coin           = 0b11
 }
 
