@@ -15,6 +15,8 @@
 		D4D7B74921761E000012B5CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D7B74721761E000012B5CA /* Main.storyboard */; };
 		D4D7B74B21761E030012B5CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D7B74A21761E030012B5CA /* Assets.xcassets */; };
 		D4D7B74E21761E030012B5CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D7B74C21761E030012B5CA /* LaunchScreen.storyboard */; };
+		D4D7B75A2177BBB60012B5CA /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7B7592177BBB60012B5CA /* Player.swift */; };
+		D4D7B75C2177BBBF0012B5CA /* PhysicsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7B75B2177BBBF0012B5CA /* PhysicsEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		D4D7B74A21761E030012B5CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4D7B74D21761E030012B5CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4D7B74F21761E030012B5CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4D7B7592177BBB60012B5CA /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		D4D7B75B2177BBBF0012B5CA /* PhysicsEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 			children = (
 				D4D7B74321761E000012B5CA /* GameScene.swift */,
 				D4D7B74521761E000012B5CA /* GameViewController.swift */,
+				D4D7B7572177BB8D0012B5CA /* Nodes */,
+				D4D7B7582177BB9C0012B5CA /* Enums */,
 				D4D7B75621761E4E0012B5CA /* Scenes */,
 			);
 			path = Game;
@@ -87,6 +93,22 @@
 				D4D7B74121761E000012B5CA /* Actions.sks */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D4D7B7572177BB8D0012B5CA /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				D4D7B7592177BBB60012B5CA /* Player.swift */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		D4D7B7582177BB9C0012B5CA /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				D4D7B75B2177BBBF0012B5CA /* PhysicsEnum.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,7 +184,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4D7B75A2177BBB60012B5CA /* Player.swift in Sources */,
 				D4D7B74421761E000012B5CA /* GameScene.swift in Sources */,
+				D4D7B75C2177BBBF0012B5CA /* PhysicsEnum.swift in Sources */,
 				D4D7B74621761E000012B5CA /* GameViewController.swift in Sources */,
 				D4D7B73E21761E000012B5CA /* AppDelegate.swift in Sources */,
 			);
