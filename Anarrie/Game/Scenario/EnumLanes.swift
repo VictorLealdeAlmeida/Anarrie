@@ -8,8 +8,13 @@
 
 import Foundation
 
-enum LanesValues: Double{
+enum LanesScale: Double{
     case leftLane = -0.33
     case centerLane = 0
     case rightLane = 0.33
+}
+
+enum ScaleNodeScenario: Double{
+    case playerHeitgh = -0.35
+    case obstacleBirth = 0.4 //Mudar
 }

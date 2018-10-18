@@ -10,12 +10,12 @@ import SpriteKit
 
 class Obstacle: SKSpriteNode{
     
-    init(texture: SKTexture, name: String, laneStart: LanesValues) {
+    init(texture: SKTexture, name: String, laneStart: LanesScale) {
         let size = CGSize(width: 100, height: 100)
         super.init(texture: texture, color: UIColor.clear, size: size)
         
         self.name = name
-        self.position = CGPoint(x: scaleWidth(scale: laneStart.rawValue), y: scaleHeight(scale: 0.4))
+        self.position = CGPoint(x: scaleWidth(scale: laneStart.rawValue), y: scaleHeight(scale: ScaleNodeScenario.obstacleBirth.rawValue))
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -27,7 +27,7 @@ class Obstacle: SKSpriteNode{
 
 class Cactus: Obstacle{
     
-    init(laneStart: LanesValues) {
+    init(laneStart: LanesScale) {
         let texture = SKTexture(imageNamed: "lui2")
         super.init(texture: texture, name: "cactus", laneStart: laneStart)
     }
