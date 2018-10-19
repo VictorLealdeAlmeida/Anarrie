@@ -6,8 +6,6 @@
 //  Copyright © 2018 Academy. All rights reserved.
 //
 
-import Foundation
-
 enum LanesScale: Double{
     case leftLane = -0.33
     case centerLane = 0
@@ -16,7 +14,8 @@ enum LanesScale: Double{
 
 enum ScaleNodeScenario: Double{
     case playerHeitgh = -0.35
-    case obstacleBirth = 0.4 //Mudar
+    case obstacleBirth = 0.6 
+    case obstacleDead = -0.6
 }
 
 

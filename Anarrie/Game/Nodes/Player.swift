@@ -11,6 +11,7 @@ import SpriteKit
 class Player: SKSpriteNode{
     
     var currentLane: LanesScale = .centerLane
+    var changeLaneDuration = 0.3
     
     init() {
         let texture = SKTexture(imageNamed: "lui1")
@@ -28,6 +29,37 @@ class Player: SKSpriteNode{
     func changeLane(newLane: LanesScale) {
         self.currentLane = newLane
     }
+    
+    func moveRight() {
+        
+        if self.currentLane == .leftLane {
+            self.changeLane(newLane: .centerLane)
+            self.run(SKAction.moveTo(x: scaleWidth(scale: LanesScale.centerLane.rawValue), duration: self.changeLaneDuration))
+        } else if self.currentLane == .centerLane {
+            self.changeLane(newLane: .rightLane)
+            self.run(SKAction.moveTo(x: scaleWidth(scale: LanesScale.rightLane.rawValue), duration: self.changeLaneDuration))
+            
+        } else {
+            // do nothing
+        }
+        
+    }
+    
+    func moveLeft() {
+        
+        if self.currentLane == .rightLane {
+            self.changeLane(newLane: .centerLane)
+            self.run(SKAction.moveTo(x: scaleWidth(scale: LanesScale.centerLane.rawValue), duration: self.changeLaneDuration))
+        } else if self.currentLane == .centerLane {
+            self.changeLane(newLane: .leftLane)
+            self.run(SKAction.moveTo(x: scaleWidth(scale: LanesScale.leftLane.rawValue), duration: self.changeLaneDuration))
+            
+        } else {
+            // do nothing
+        }
+        
+    }
+    
     
     
     

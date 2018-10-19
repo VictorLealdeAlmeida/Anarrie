@@ -17,26 +17,10 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        createScene()
-        
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(movePlayerLeft))
-        swipeLeft.direction = .left
-        view.addGestureRecognizer(swipeLeft)
-        
-        
-        
-        let swipeRight:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(movePlayerRight))
-        swipeRight.direction = .right
-        view.addGestureRecognizer(swipeRight)
        
-    }
-    
-    @objc func movePlayerLeft(){
-        gameScene?.movePlayerLeft()
-    }
-    
-    @objc func movePlayerRight(){
-        gameScene?.movePlayerRight()
+        createScene()
+        createUserInputs()
+       
     }
 
     func createScene(){
@@ -69,4 +53,30 @@ class GameViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+}
+
+
+extension GameViewController{
+    
+    func createUserInputs(){
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(movePlayerLeft))
+        swipeLeft.direction = .left
+        view.addGestureRecognizer(swipeLeft)
+        
+        
+        let swipeRight:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(movePlayerRight))
+        swipeRight.direction = .right
+        view.addGestureRecognizer(swipeRight)
+        
+    }
+    
+    @objc func movePlayerLeft(){
+        gameScene?.player.moveLeft()
+    }
+    
+    @objc func movePlayerRight(){
+        gameScene?.player.moveRight()
+    }
+    
 }

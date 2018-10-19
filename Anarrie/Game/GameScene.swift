@@ -17,47 +17,27 @@ class GameScene: SKScene {
     
     override func sceneDidLoad() {
         
-        addChild(player)
+        createNodes()
         
-        let o = Cactus(laneStart: .leftLane)
-    
-        addChild(o)
-        
-        addChild(Cactus(laneStart: .rightLane))
+        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(createObstacles), userInfo: nil, repeats: true)
+
         
  
 
     }
     
+    func createNodes(){
+        addChild(player)
+    }
     
-    func movePlayerRight() {
-        
-        if player.currentLane == .leftLane {
-            player.changeLane(newLane: .centerLane)
-            player.run(SKAction.moveTo(x: scaleWidth(scale: LanesScale.centerLane.rawValue), duration: 0.5))
-        } else if player.currentLane == .centerLane {
-            player.changeLane(newLane: .rightLane)
-            player.run(SKAction.moveTo(x: scaleWidth(scale: LanesScale.rightLane.rawValue), duration: 0.5))
+    @objc func createObstacles(){
+        addChild(laneRandom(laneStart: laneRandom()))
+    }
+    
+    
 
-        } else {
-            // do nothing
-        }
-        
-    }
     
-    func movePlayerLeft() {
-        
-        if player.currentLane == .rightLane {
-            player.changeLane(newLane: .centerLane)
-            player.run(SKAction.moveTo(x: scaleWidth(scale: LanesScale.centerLane.rawValue), duration: 0.5))
-        } else if player.currentLane == .centerLane {
-            player.changeLane(newLane: .leftLane)
-            player.run(SKAction.moveTo(x: scaleWidth(scale: LanesScale.leftLane.rawValue), duration: 0.5))
-            
-        } else {
-            // do nothing
-        }
-        
-    }
+    
+   
 
 }

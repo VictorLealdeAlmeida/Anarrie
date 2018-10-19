@@ -16,6 +16,42 @@ class Obstacle: SKSpriteNode{
         
         self.name = name
         self.position = CGPoint(x: scaleWidth(scale: laneStart.rawValue), y: scaleHeight(scale: ScaleNodeScenario.obstacleBirth.rawValue))
+        
+        moveDown()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    func moveDown(){
+        self.run(SKAction.sequence([
+            SKAction.moveTo(y: scaleHeight(scale: ScaleNodeScenario.obstacleDead.rawValue), duration: 4),
+            SKAction.removeFromParent()
+            ]))
+    }
+    
+}
+
+class Cactus: Obstacle{
+    
+    init(laneStart: LanesScale) {
+        let texture = SKTexture(imageNamed: "cactoo")
+        super.init(texture: texture, name: "cactus", laneStart: laneStart)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    
+}
+
+class Bonfire: Obstacle{
+    
+    init(laneStart: LanesScale) {
+        let texture = SKTexture(imageNamed: "fogueira")
+        super.init(texture: texture, name: "bonfire", laneStart: laneStart)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -24,11 +60,11 @@ class Obstacle: SKSpriteNode{
     
 }
 
-class Cactus: Obstacle{
+class Snake: Obstacle{
     
     init(laneStart: LanesScale) {
-        let texture = SKTexture(imageNamed: "lui2")
-        super.init(texture: texture, name: "cactus", laneStart: laneStart)
+        let texture = SKTexture(imageNamed: "cobra")
+        super.init(texture: texture, name: "snake", laneStart: laneStart)
     }
     
     required init?(coder aDecoder: NSCoder) {
