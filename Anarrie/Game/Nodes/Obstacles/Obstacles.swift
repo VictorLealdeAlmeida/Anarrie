@@ -19,8 +19,9 @@ class Obstacle: SKSpriteNode{
         
         self.physicsBody = SKPhysicsBody(circleOfRadius: self.size.width/2)
         
-        self.physicsBody?.contactTestBitMask = PhysicsCategory.Player.rawValue
         self.physicsBody?.categoryBitMask = PhysicsCategory.Obstacle.rawValue
+
+        self.physicsBody?.contactTestBitMask = PhysicsCategory.Player.rawValue | PhysicsCategory.SensorSnake.rawValue
         self.physicsBody?.collisionBitMask = PhysicsCategory.None.rawValue
 
 
@@ -38,6 +39,7 @@ class Obstacle: SKSpriteNode{
             ]))
     }
     
+
 }
 
 class Cactus: Obstacle{
@@ -69,13 +71,39 @@ class Bonfire: Obstacle{
 
 class Snake: Obstacle{
     
+    var currentLane: LanesScale!
+    
     init(laneStart: LanesScale) {
         let texture = SKTexture(imageNamed: "cobra")
         super.init(texture: texture, name: "snake", laneStart: laneStart)
+        
+        self.currentLane = laneStart
+
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    func laneLottery() {
+        let x = Int.random(in: 0 ... 1)
+        if x == 1{
+            changeLane()
+        }
+    }
+    
+    func changeLane(){
+        if self.currentLane == LanesScale.leftLane || self.currentLane == LanesScale.rightLane{
+            self.run(SKAction.moveTo(x: scaleWidth(scale: LanesScale.centerLane.rawValue), duration: 0.5))
+        }else{
+            let x = Int.random(in: 0 ... 1)
+            var laneChoice = LanesScale.leftLane
+            if x == 1{
+                laneChoice = LanesScale.rightLane
+            }
+            self.run(SKAction.moveTo(x: scaleWidth(scale: laneChoice.rawValue), duration: 0.5))
+            
+        }
     }
     
 }

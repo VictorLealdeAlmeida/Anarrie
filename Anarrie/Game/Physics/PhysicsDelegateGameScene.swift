@@ -17,8 +17,10 @@ extension GameScene: SKPhysicsContactDelegate{
         physicsWorld.gravity = CGVector(dx: 0, dy: 0)
     }
     
+
+    
     @objc(didBeginContact:) func didBegin(_ contact: SKPhysicsContact) {
-        
+
         let firstBody: SKPhysicsBody
         let secondBody: SKPhysicsBody
         
@@ -31,6 +33,10 @@ extension GameScene: SKPhysicsContactDelegate{
             secondBody = contact.bodyA;
         }
         
+        print(firstBody.node?.name)
+        print(secondBody.node?.name)
+
+        
         if firstBody.categoryBitMask == PhysicsCategory.Obstacle.rawValue &&
             secondBody.categoryBitMask == PhysicsCategory.Player.rawValue{
             
@@ -39,6 +45,10 @@ extension GameScene: SKPhysicsContactDelegate{
             secondBody.node?.removeFromParent()
             
             
+        }else if firstBody.categoryBitMask == PhysicsCategory.SensorSnake.rawValue && secondBody.categoryBitMask == PhysicsCategory.Obstacle.rawValue{
+            
+            
+            print("colisao cobra sensor")
         }
         
         

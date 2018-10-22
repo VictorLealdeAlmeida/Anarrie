@@ -89,8 +89,8 @@
 		D4D7B75521761E480012B5CA /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				D4D7B74321761E000012B5CA /* GameScene.swift */,
 				D4D7B74521761E000012B5CA /* GameViewController.swift */,
+				D4D7B74321761E000012B5CA /* GameScene.swift */,
 				D4D7B7612178C5450012B5CA /* Scenario */,
 				D4D7B7572177BB8D0012B5CA /* Nodes */,
 				D4D7B7582177BB9C0012B5CA /* Physics */,

@@ -13,9 +13,10 @@ enum LanesScale: Double{
 }
 
 enum ScaleNodeScenario: Double{
-    case playerHeitgh = -0.35
+    case playerHeight = -0.35
     case obstacleBirth = 0.6 
     case obstacleDead = -0.6
+    case sensorSnakeHeight = 0
 }
 
 
