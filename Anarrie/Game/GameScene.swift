@@ -29,14 +29,20 @@ class GameScene: SKScene {
     }
     
     func createSensor() {
-        let sensor = SKSpriteNode(imageNamed: "lui1")
+        let sensor = SKSpriteNode(texture: SKTexture(imageNamed: "lui1"), color: UIColor.clear, size: CGSize(width: self.size.width, height: 10))
         sensor.position = CGPoint(x: 0, y: ScaleNodeScenario.sensorSnakeHeight.rawValue)
-        sensor.size = CGSize(width: self.size.width, height: 10)
+       // sensor.size = CGSize(width: self.size.width, height: 10)
         sensor.physicsBody = SKPhysicsBody(rectangleOf: sensor.size)
         
-        sensor.physicsBody?.contactTestBitMask = PhysicsCategory.SensorSnake.rawValue
-        sensor.physicsBody?.categoryBitMask = PhysicsCategory.Obstacle.rawValue
+        sensor.name = "sensorSnake"
+        
+        sensor.physicsBody?.categoryBitMask = PhysicsCategory.SensorSnake.rawValue
+        sensor.physicsBody?.contactTestBitMask = PhysicsCategory.Obstacle.rawValue
         sensor.physicsBody?.collisionBitMask = PhysicsCategory.None.rawValue
+        
+        
+        
+       
         
         self.addChild(sensor)
     }

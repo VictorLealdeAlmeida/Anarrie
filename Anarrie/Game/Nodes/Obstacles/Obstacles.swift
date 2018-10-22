@@ -20,7 +20,6 @@ class Obstacle: SKSpriteNode{
         self.physicsBody = SKPhysicsBody(circleOfRadius: self.size.width/2)
         
         self.physicsBody?.categoryBitMask = PhysicsCategory.Obstacle.rawValue
-
         self.physicsBody?.contactTestBitMask = PhysicsCategory.Player.rawValue | PhysicsCategory.SensorSnake.rawValue
         self.physicsBody?.collisionBitMask = PhysicsCategory.None.rawValue
 

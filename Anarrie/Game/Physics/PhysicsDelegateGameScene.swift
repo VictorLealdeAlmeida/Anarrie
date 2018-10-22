@@ -33,8 +33,11 @@ extension GameScene: SKPhysicsContactDelegate{
             secondBody = contact.bodyA;
         }
         
-        print(firstBody.node?.name)
-        print(secondBody.node?.name)
+//        print(contact.bodyA.categoryBitMask)
+//        print(contact.bodyA.node?.name)
+//        print(contact.bodyB.categoryBitMask)
+//        print(contact.bodyB.node?.name)
+
 
         
         if firstBody.categoryBitMask == PhysicsCategory.Obstacle.rawValue &&
