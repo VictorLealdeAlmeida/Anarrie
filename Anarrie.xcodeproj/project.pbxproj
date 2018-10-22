@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38742FA7217DF13B00B43098 /* PhysicsDelegateGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38742FA6217DF13B00B43098 /* PhysicsDelegateGameScene.swift */; };
 		D4D7B73E21761E000012B5CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7B73D21761E000012B5CA /* AppDelegate.swift */; };
 		D4D7B74021761E000012B5CA /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D4D7B73F21761E000012B5CA /* GameScene.sks */; };
 		D4D7B74221761E000012B5CA /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = D4D7B74121761E000012B5CA /* Actions.sks */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38742FA6217DF13B00B43098 /* PhysicsDelegateGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsDelegateGameScene.swift; sourceTree = "<group>"; };
 		D4D7B73A21761E000012B5CA /* Anarrie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anarrie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D7B73D21761E000012B5CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4D7B73F21761E000012B5CA /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -87,8 +89,8 @@
 		D4D7B75521761E480012B5CA /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				D4D7B74321761E000012B5CA /* GameScene.swift */,
 				D4D7B74521761E000012B5CA /* GameViewController.swift */,
+				D4D7B74321761E000012B5CA /* GameScene.swift */,
 				D4D7B7612178C5450012B5CA /* Scenario */,
 				D4D7B7572177BB8D0012B5CA /* Nodes */,
 				D4D7B7582177BB9C0012B5CA /* Physics */,
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				D4D7B75B2177BBBF0012B5CA /* PhysicsEnum.swift */,
+				38742FA6217DF13B00B43098 /* PhysicsDelegateGameScene.swift */,
 			);
 			path = Physics;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				D4D7B73E21761E000012B5CA /* AppDelegate.swift in Sources */,
 				D4D7B75E2178AD810012B5CA /* ExtensionsNode.swift in Sources */,
 				D4D7B766217A148C0012B5CA /* ObstaclesGeneration.swift in Sources */,
+				38742FA7217DF13B00B43098 /* PhysicsDelegateGameScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,7 +375,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A975LQD622;
+				DEVELOPMENT_TEAM = SNKGQ9S9S3;
 				INFOPLIST_FILE = Anarrie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -390,7 +394,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A975LQD622;
+				DEVELOPMENT_TEAM = SNKGQ9S9S3;
 				INFOPLIST_FILE = Anarrie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
