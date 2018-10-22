@@ -31,7 +31,7 @@ class GameScene: SKScene {
     }
     
     @objc func createObstacles(){
-        addChild(laneRandom(laneStart: laneRandom()))
+        addChild(obstacleRandom(laneStart: laneRandom()))
     }
     
     

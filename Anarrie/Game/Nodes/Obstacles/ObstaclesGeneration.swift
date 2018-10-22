@@ -23,7 +23,7 @@ extension GameScene{
         }
     }
     
-    func laneRandom(laneStart: LanesScale) -> Obstacle{
+    func obstacleRandom(laneStart: LanesScale) -> Obstacle{
         let value = Int.random(in: 0 ... 2)
         
         switch value {
