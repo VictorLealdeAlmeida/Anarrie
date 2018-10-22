@@ -17,11 +17,9 @@ class GameScene: SKScene {
     
     override func sceneDidLoad() {
         
+        createPhysics()
         createNodes()
-        
         Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(createObstacles), userInfo: nil, repeats: true)
-
-        
  
 
     }

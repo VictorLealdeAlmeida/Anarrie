@@ -17,6 +17,13 @@ class Obstacle: SKSpriteNode{
         self.name = name
         self.position = CGPoint(x: scaleWidth(scale: laneStart.rawValue), y: scaleHeight(scale: ScaleNodeScenario.obstacleBirth.rawValue))
         
+        self.physicsBody = SKPhysicsBody(circleOfRadius: self.size.width/2)
+        
+        self.physicsBody?.contactTestBitMask = PhysicsCategory.Player.rawValue
+        self.physicsBody?.categoryBitMask = PhysicsCategory.Obstacle.rawValue
+        self.physicsBody?.collisionBitMask = PhysicsCategory.None.rawValue
+
+
         moveDown()
     }
     
