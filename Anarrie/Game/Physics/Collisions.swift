@@ -28,4 +28,11 @@ extension GameScene{
         sensorBirth?.removeFromParent()
     }
     
+    
+    func collisionPlayerBonusNode(bonusNode: SKSpriteNode){
+        bonusNode.removeFromParent()
+        
+        
+    }
+    
 }

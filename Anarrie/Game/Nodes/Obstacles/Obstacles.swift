@@ -11,7 +11,7 @@ import SpriteKit
 class Obstacle: SKSpriteNode{
     
     init(texture: SKTexture, name: String, laneStart: LanesScale) {
-        let size = CGSize(width: 100, height: 100)
+        let size = CGSize(width: 120, height: 120)
         super.init(texture: texture, color: UIColor.clear, size: size)
         
         self.name = name

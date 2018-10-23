@@ -60,6 +60,11 @@ extension GameScene: SKPhysicsContactDelegate{
             }
             
             
+        }else if firstBody.categoryBitMask == PhysicsCategory.BonusNode.rawValue && secondBody.categoryBitMask == PhysicsCategory.Player.rawValue{
+            
+            collisionPlayerBonusNode(bonusNode: firstBody.node as! SKSpriteNode)
+            
+            
         }
         
         

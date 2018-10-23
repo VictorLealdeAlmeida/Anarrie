@@ -15,7 +15,7 @@ class Player: SKSpriteNode{
     
     init() {
         let texture = SKTexture(imageNamed: "lui1")
-        let size = CGSize(width: 100, height: 100)
+        let size = CGSize(width: 120, height: 120)
         super.init(texture: texture, color: UIColor.clear, size: size)
         
         self.name = "player"

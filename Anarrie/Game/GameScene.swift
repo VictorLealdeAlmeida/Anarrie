@@ -38,6 +38,11 @@ class GameScene: SKScene {
     
     @objc func createObstacles(){
         obstacleGeneration(laneStart: laneRandom())
+        currentGameScreen.run(SKAction.sequence([
+            SKAction.wait(forDuration: TimeInterval(Double(Speeds.obstacles.rawValue)/Double.random(in: 2.5 ... 6.5))),
+                          SKAction.run {
+                            self.bonusNodesGeneration(laneStart: self.laneRandom())
+        }]))
     }
     
     

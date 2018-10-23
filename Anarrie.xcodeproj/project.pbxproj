@@ -12,6 +12,8 @@
 		D4603DEB217F32BD008C8DA3 /* GameOverScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4603DEA217F32BD008C8DA3 /* GameOverScreen.swift */; };
 		D4603DED217F3663008C8DA3 /* CurrentGameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4603DEC217F3663008C8DA3 /* CurrentGameScreen.swift */; };
 		D4603DEF217F4F66008C8DA3 /* Collisions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4603DEE217F4F66008C8DA3 /* Collisions.swift */; };
+		D4603DF2217F749E008C8DA3 /* BonusNodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4603DF1217F749E008C8DA3 /* BonusNodes.swift */; };
+		D4603DF4217F77D6008C8DA3 /* BonusGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4603DF3217F77D6008C8DA3 /* BonusGeneration.swift */; };
 		D4D7B73E21761E000012B5CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7B73D21761E000012B5CA /* AppDelegate.swift */; };
 		D4D7B74021761E000012B5CA /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D4D7B73F21761E000012B5CA /* GameScene.sks */; };
 		D4D7B74221761E000012B5CA /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = D4D7B74121761E000012B5CA /* Actions.sks */; };
@@ -35,6 +37,8 @@
 		D4603DEA217F32BD008C8DA3 /* GameOverScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScreen.swift; sourceTree = "<group>"; };
 		D4603DEC217F3663008C8DA3 /* CurrentGameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGameScreen.swift; sourceTree = "<group>"; };
 		D4603DEE217F4F66008C8DA3 /* Collisions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collisions.swift; sourceTree = "<group>"; };
+		D4603DF1217F749E008C8DA3 /* BonusNodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusNodes.swift; sourceTree = "<group>"; };
+		D4603DF3217F77D6008C8DA3 /* BonusGeneration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusGeneration.swift; sourceTree = "<group>"; };
 		D4D7B73A21761E000012B5CA /* Anarrie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anarrie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D7B73D21761E000012B5CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4D7B73F21761E000012B5CA /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -80,6 +84,15 @@
 				D4603DEC217F3663008C8DA3 /* CurrentGameScreen.swift */,
 			);
 			path = GameOverScreen;
+			sourceTree = "<group>";
+		};
+		D4603DF0217F7444008C8DA3 /* BonusNodes */ = {
+			isa = PBXGroup;
+			children = (
+				D4603DF1217F749E008C8DA3 /* BonusNodes.swift */,
+				D4603DF3217F77D6008C8DA3 /* BonusGeneration.swift */,
+			);
+			path = BonusNodes;
 			sourceTree = "<group>";
 		};
 		D4D7B73121761E000012B5CA = {
@@ -139,6 +152,7 @@
 			children = (
 				D4603DE6217E6C4D008C8DA3 /* Sensors */,
 				D4D7B767217A2F230012B5CA /* Obstacles */,
+				D4603DF0217F7444008C8DA3 /* BonusNodes */,
 				D4D7B7592177BBB60012B5CA /* Player.swift */,
 				D4D7B75D2178AD810012B5CA /* ExtensionsNode.swift */,
 			);
@@ -256,7 +270,9 @@
 				D4603DED217F3663008C8DA3 /* CurrentGameScreen.swift in Sources */,
 				D4D7B75C2177BBBF0012B5CA /* PhysicsEnum.swift in Sources */,
 				D4D7B74621761E000012B5CA /* GameViewController.swift in Sources */,
+				D4603DF4217F77D6008C8DA3 /* BonusGeneration.swift in Sources */,
 				D4603DEF217F4F66008C8DA3 /* Collisions.swift in Sources */,
+				D4603DF2217F749E008C8DA3 /* BonusNodes.swift in Sources */,
 				D4D7B73E21761E000012B5CA /* AppDelegate.swift in Sources */,
 				D4D7B75E2178AD810012B5CA /* ExtensionsNode.swift in Sources */,
 				D4D7B766217A148C0012B5CA /* ObstaclesGeneration.swift in Sources */,
