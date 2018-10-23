@@ -31,11 +31,13 @@ extension GameScene{
             let linePartnet = laneRandom()
 
             if linePartnet != laneStart{
-                addChild(Cactus(laneStart: laneStart))
-               // addChild(Cactus(laneStart: linePartnet))
-            }else{
-                addChild(Cactus(laneStart: laneStart))
+                //Mudar name do cacto parceiro para nao acionar o sensor de nascimento duas vezes
+                let cactusPartner = Cactus(laneStart: linePartnet)
+                cactusPartner.name = "cactusPartner"
+                addChild(cactusPartner)
             }
+            
+            addChild(Cactus(laneStart: laneStart))
         case 4:
             addChild(Bonfire(laneStart: laneStart))
         case 5:

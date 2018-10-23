@@ -43,17 +43,9 @@ extension GameScene: SKPhysicsContactDelegate{
         if firstBody.categoryBitMask == PhysicsCategory.Obstacle.rawValue &&
             secondBody.categoryBitMask == PhysicsCategory.Player.rawValue{
             
-            secondBody.node?.removeFromParent()
-            
-            let scoreLabel = currentGameScreen.childNode(withName: "scoreLabel")
-            
-            scoreLabel?.removeAction(forKey: "countScore")
-            
+            collisionPlayerObstacle(player: secondBody.node as! SKSpriteNode)
             
         }else if firstBody.categoryBitMask == PhysicsCategory.SensorSnake.rawValue && secondBody.categoryBitMask == PhysicsCategory.Obstacle.rawValue{
-            
-          //  print("colisao cobra sensor")
-            
             
             if secondBody.node?.name == "snake"{
                
@@ -63,8 +55,9 @@ extension GameScene: SKPhysicsContactDelegate{
             
         }else if firstBody.categoryBitMask == PhysicsCategory.SensorBirth.rawValue && secondBody.categoryBitMask == PhysicsCategory.Obstacle.rawValue{
             
+            if secondBody.node?.name != "cactusPartner"{
                 createObstacles()
-            
+            }
             
             
         }

@@ -11,6 +11,7 @@
 		D4603DE8217E6C71008C8DA3 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4603DE7217E6C71008C8DA3 /* Sensor.swift */; };
 		D4603DEB217F32BD008C8DA3 /* GameOverScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4603DEA217F32BD008C8DA3 /* GameOverScreen.swift */; };
 		D4603DED217F3663008C8DA3 /* CurrentGameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4603DEC217F3663008C8DA3 /* CurrentGameScreen.swift */; };
+		D4603DEF217F4F66008C8DA3 /* Collisions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4603DEE217F4F66008C8DA3 /* Collisions.swift */; };
 		D4D7B73E21761E000012B5CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D7B73D21761E000012B5CA /* AppDelegate.swift */; };
 		D4D7B74021761E000012B5CA /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D4D7B73F21761E000012B5CA /* GameScene.sks */; };
 		D4D7B74221761E000012B5CA /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = D4D7B74121761E000012B5CA /* Actions.sks */; };
@@ -33,6 +34,7 @@
 		D4603DE7217E6C71008C8DA3 /* Sensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
 		D4603DEA217F32BD008C8DA3 /* GameOverScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScreen.swift; sourceTree = "<group>"; };
 		D4603DEC217F3663008C8DA3 /* CurrentGameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGameScreen.swift; sourceTree = "<group>"; };
+		D4603DEE217F4F66008C8DA3 /* Collisions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collisions.swift; sourceTree = "<group>"; };
 		D4D7B73A21761E000012B5CA /* Anarrie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anarrie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D7B73D21761E000012B5CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4D7B73F21761E000012B5CA /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				D4D7B75B2177BBBF0012B5CA /* PhysicsEnum.swift */,
 				38742FA6217DF13B00B43098 /* PhysicsDelegateGameScene.swift */,
+				D4603DEE217F4F66008C8DA3 /* Collisions.swift */,
 			);
 			path = Physics;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				D4603DED217F3663008C8DA3 /* CurrentGameScreen.swift in Sources */,
 				D4D7B75C2177BBBF0012B5CA /* PhysicsEnum.swift in Sources */,
 				D4D7B74621761E000012B5CA /* GameViewController.swift in Sources */,
+				D4603DEF217F4F66008C8DA3 /* Collisions.swift in Sources */,
 				D4D7B73E21761E000012B5CA /* AppDelegate.swift in Sources */,
 				D4D7B75E2178AD810012B5CA /* ExtensionsNode.swift in Sources */,
 				D4D7B766217A148C0012B5CA /* ObstaclesGeneration.swift in Sources */,
