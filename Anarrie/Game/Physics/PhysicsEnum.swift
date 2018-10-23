@@ -13,6 +13,6 @@ enum PhysicsCategory: UInt32 {
     case Player         = 0b01
     case Obstacle       = 0b10
     case SensorSnake    = 0b11
-    case aa    = 0b100
+    case SensorBirth    = 0b100
 }
 

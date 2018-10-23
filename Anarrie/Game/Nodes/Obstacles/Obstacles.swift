@@ -33,7 +33,7 @@ class Obstacle: SKSpriteNode{
     
     func moveDown(){
         self.run(SKAction.sequence([
-            SKAction.moveTo(y: scaleHeight(scale: ScaleNodeScenario.obstacleDead.rawValue), duration: 4),
+            SKAction.moveTo(y: scaleHeight(scale: ScaleNodeScenario.obstacleDead.rawValue), duration: Speeds.obstacles.rawValue),
             SKAction.removeFromParent()
             ]))
     }
@@ -91,7 +91,7 @@ class Snake: Obstacle{
         }
     }
     
-    func changeLane(){
+    private func changeLane(){
         if self.currentLane == LanesScale.leftLane || self.currentLane == LanesScale.rightLane{
             self.run(SKAction.moveTo(x: scaleWidth(scale: LanesScale.centerLane.rawValue), duration: 0.5))
         }else{

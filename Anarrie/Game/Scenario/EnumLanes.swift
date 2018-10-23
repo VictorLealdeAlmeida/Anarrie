@@ -17,6 +17,11 @@ enum ScaleNodeScenario: Double{
     case obstacleBirth = 0.6 
     case obstacleDead = -0.6
     case sensorSnakeHeight = 0
+    case sensorBirthObstacle = -0.1
+}
+
+enum Speeds: Double{
+    case obstacles = 3 //Tempo em segundos para pecorrer o mapa
 }
 
 

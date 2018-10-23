@@ -43,15 +43,30 @@ extension GameScene: SKPhysicsContactDelegate{
         if firstBody.categoryBitMask == PhysicsCategory.Obstacle.rawValue &&
             secondBody.categoryBitMask == PhysicsCategory.Player.rawValue{
             
-            print("colisão obstaculo com player")
-            
             secondBody.node?.removeFromParent()
+            
+            let scoreLabel = currentGameScreen.childNode(withName: "scoreLabel")
+            
+            scoreLabel?.removeAction(forKey: "countScore")
             
             
         }else if firstBody.categoryBitMask == PhysicsCategory.SensorSnake.rawValue && secondBody.categoryBitMask == PhysicsCategory.Obstacle.rawValue{
             
+          //  print("colisao cobra sensor")
             
-            print("colisao cobra sensor")
+            
+            if secondBody.node?.name == "snake"{
+               
+                let snake: Snake = secondBody.node as! Snake
+                snake.laneLottery()
+            }
+            
+        }else if firstBody.categoryBitMask == PhysicsCategory.SensorBirth.rawValue && secondBody.categoryBitMask == PhysicsCategory.Obstacle.rawValue{
+            
+                createObstacles()
+            
+            
+            
         }
         
         

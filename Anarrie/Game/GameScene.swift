@@ -14,45 +14,30 @@ class GameScene: SKScene {
     var gameViewController: GameViewController!
     let player = Player()
     
+    let currentGameScreen = SKSpriteNode()
+    let screenGameOver = SKSpriteNode()
+    
     
     override func sceneDidLoad() {
         
         createPhysics()
         createNodes()
-        createSensor()
+        createObstacles()
         
-        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(createObstacles), userInfo: nil, repeats: true)
-        
+        createGameCurrent()
        
  
 
     }
     
-    func createSensor() {
-        let sensor = SKSpriteNode(texture: SKTexture(imageNamed: "lui1"), color: UIColor.clear, size: CGSize(width: self.size.width, height: 10))
-        sensor.position = CGPoint(x: 0, y: ScaleNodeScenario.sensorSnakeHeight.rawValue)
-       // sensor.size = CGSize(width: self.size.width, height: 10)
-        sensor.physicsBody = SKPhysicsBody(rectangleOf: sensor.size)
-        
-        sensor.name = "sensorSnake"
-        
-        sensor.physicsBody?.categoryBitMask = PhysicsCategory.SensorSnake.rawValue
-        sensor.physicsBody?.contactTestBitMask = PhysicsCategory.Obstacle.rawValue
-        sensor.physicsBody?.collisionBitMask = PhysicsCategory.None.rawValue
-        
-        
-        
-       
-        
-        self.addChild(sensor)
-    }
-    
     func createNodes(){
-        addChild(player)
+        self.addChild(player)
+        self.addChild(Sensor(name: "sensorSnake", hight: ScaleNodeScenario.sensorSnakeHeight, phyCategory: PhysicsCategory.SensorSnake))
+        self.addChild(Sensor(name: "sensorBirth", hight: ScaleNodeScenario.sensorBirthObstacle, phyCategory: PhysicsCategory.SensorBirth))
     }
     
     @objc func createObstacles(){
-        addChild(obstacleRandom(laneStart: laneRandom()))
+        obstacleGeneration(laneStart: laneRandom())
     }
     
     
@@ -62,3 +47,5 @@ class GameScene: SKScene {
    
 
 }
+
+
