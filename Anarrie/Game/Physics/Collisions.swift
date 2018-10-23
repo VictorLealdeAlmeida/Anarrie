@@ -16,6 +16,14 @@ extension GameScene{
         let scoreLabel = self.currentGameScreen.childNode(withName: "scoreLabel")
         scoreLabel?.removeAction(forKey: "countScore")
         
+        scoreLabel?.run(SKAction.sequence([
+            SKAction.move(to: CGPoint(x: 0, y: 0), duration: 2),
+            SKAction.wait(forDuration: 3),
+            SKAction.run {
+                self.gameViewController.replay()
+            }
+            ]))
+        
         let sensorBirth = self.childNode(withName: "sensorBirth")
         sensorBirth?.removeFromParent()
     }

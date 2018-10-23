@@ -12,7 +12,7 @@ import GameplayKit
 
 class GameViewController: UIViewController {
 
-    let gameScene = GameScene(fileNamed:"GameScene")
+    var gameScene = GameScene(fileNamed:"GameScene")
     
     
     override func viewDidLoad() {
@@ -48,6 +48,12 @@ class GameViewController: UIViewController {
             skView?.scene?.removeAllChildren()
             skView?.presentScene(nil)
         }
+    }
+    
+    func replay(){
+        clearScene()
+        gameScene = GameScene(fileNamed:"GameScene")
+        createScene()
     }
     
     override var prefersStatusBarHidden: Bool {
