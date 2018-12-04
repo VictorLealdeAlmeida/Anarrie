@@ -12,7 +12,9 @@ import SpriteKit
 extension GameScene{
     
     func createGameCurrent(){
-        addChild(currentGameScreen)
+        
+        self.currentGameScreen.name = "UITapGestureRecognizer"
+        addChild(self.currentGameScreen)
         
         createLabelScore()
     }

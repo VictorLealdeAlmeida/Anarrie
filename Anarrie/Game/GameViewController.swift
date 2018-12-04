@@ -66,23 +66,50 @@ extension GameViewController{
     
     func createUserInputs(){
         
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(movePlayerLeft))
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.movePlayerLeft))
         swipeLeft.direction = .left
         view.addGestureRecognizer(swipeLeft)
         
         
-        let swipeRight:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(movePlayerRight))
+        let swipeRight:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.movePlayerRight))
         swipeRight.direction = .right
         view.addGestureRecognizer(swipeRight)
         
+        setTap(selector: #selector(self.tapController))
     }
     
     @objc func movePlayerLeft(){
-        gameScene?.player.moveLeft()
+        self.gameScene?.player.moveLeft()
     }
     
     @objc func movePlayerRight(){
-        gameScene?.player.moveRight()
+        self.gameScene?.player.moveRight()
+    }
+    
+    @objc func tapPlay(){
+        self.gameScene?.play()
+    }
+    
+    @objc func tapController(){
+        //ALERTA - bad smell
+        
+        
+        if self.gameScene?.screenGameOver.name != nil{
+            self.replay()
+        }else if self.gameScene?.currentGameScreen.name != nil{
+            
+        }else{
+            self.gameScene?.play()
+        }
+        
+        
+    }
+    
+    func setTap(selector: Selector?){
+        let tapGesture = UITapGestureRecognizer(target: self, action: selector)
+        tapGesture.numberOfTapsRequired = 1
+        tapGesture.numberOfTouchesRequired = 1
+        view.addGestureRecognizer(tapGesture)
     }
     
 }

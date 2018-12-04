@@ -20,14 +20,16 @@ class GameScene: SKScene {
     
     override func sceneDidLoad() {
         
-        createPhysics()
-        createNodes()
-        createObstacles()
-        
-        createGameCurrent()
+    
        
- 
-
+    }
+    
+    func play(){
+        self.createPhysics()
+        self.createNodes()
+        self.createObstacles()
+        
+        self.createGameCurrent()
     }
     
     func createNodes(){

@@ -11,11 +11,15 @@ import SpriteKit
 extension GameScene{
     
     func createGameOverScreen(){
-        addChild(screenGameOver)
+        self.screenGameOver.name = "screenGameOver"
+        addChild(self.screenGameOver)
     }
     
     func createElementsGameOver(){
-        
+    }
+    
+    func replay(){
+       // self.gameViewController.tapReplay()
     }
     
     
