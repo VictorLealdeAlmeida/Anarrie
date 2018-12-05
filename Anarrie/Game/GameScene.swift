@@ -16,6 +16,7 @@ class GameScene: SKScene {
     
     let currentGameScreen = SKSpriteNode()
     let screenGameOver = SKSpriteNode()
+    let skyScreen = SKSpriteNode()
     
     
     override func sceneDidLoad() {
@@ -30,6 +31,9 @@ class GameScene: SKScene {
         self.createObstacles()
         
         self.createGameCurrent()
+        
+        self.createSky()
+        
     }
     
     func createNodes(){
@@ -39,12 +43,21 @@ class GameScene: SKScene {
     }
     
     @objc func createObstacles(){
-        obstacleGeneration(laneStart: laneRandom())
-        currentGameScreen.run(SKAction.sequence([
+        self.obstacleGeneration(laneStart: laneRandom())
+        self.currentGameScreen.run(SKAction.sequence([
             SKAction.wait(forDuration: TimeInterval(Double(Speeds.obstacles.rawValue)/Double.random(in: 2.5 ... 6.5))),
                           SKAction.run {
                             self.bonusNodesGeneration(laneStart: self.laneRandom())
         }]))
+        self.createSkyLoterry()
+    }
+    
+    func createSkyLoterry(){
+        if Int.random(in: 0 ... 1) == 0{
+            self.createSky()
+        }
+        
+        
     }
     
     

@@ -56,13 +56,13 @@ extension GameScene: SKPhysicsContactDelegate{
         }else if firstBody.categoryBitMask == PhysicsCategory.SensorBirth.rawValue && secondBody.categoryBitMask == PhysicsCategory.Obstacle.rawValue{
             
             if secondBody.node?.name != "cactusPartner"{
-                createObstacles()
+                self.createObstacles()
             }
             
             
         }else if firstBody.categoryBitMask == PhysicsCategory.BonusNode.rawValue && secondBody.categoryBitMask == PhysicsCategory.Player.rawValue{
             
-            collisionPlayerBonusNode(bonusNode: firstBody.node as! SKSpriteNode)
+            self.collisionPlayerBonusNode(bonusNode: firstBody.node as! SKSpriteNode)
             
             
         }

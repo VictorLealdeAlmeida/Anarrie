@@ -97,7 +97,9 @@ extension GameViewController{
         if self.gameScene?.screenGameOver.name != nil{
             self.replay()
         }else if self.gameScene?.currentGameScreen.name != nil{
-            
+            if Int.random(in: 0 ... 5) == 0{
+                self.gameScene?.removeSky()
+            }
         }else{
             self.gameScene?.play()
         }

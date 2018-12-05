@@ -15,6 +15,7 @@ extension GameScene{
         
         self.currentGameScreen.name = "UITapGestureRecognizer"
         addChild(self.currentGameScreen)
+        addChild(self.skyScreen)
         
         createLabelScore()
     }

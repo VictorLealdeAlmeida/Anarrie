@@ -19,7 +19,7 @@ extension GameScene{
         scoreLabel?.run(SKAction.sequence([
             SKAction.move(to: CGPoint(x: 0, y: 0), duration: 2),
             SKAction.wait(forDuration: 1),
-            SKAction.run {
+            SKAction.run{
                 self.createGameOverScreen()
             }
             ]))
