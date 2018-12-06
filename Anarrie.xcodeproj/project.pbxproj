@@ -13,6 +13,9 @@
 		D42769D221B825B200C24E1B /* SkyGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42769D121B825B200C24E1B /* SkyGameScene.swift */; };
 		D42769D421B890A700C24E1B /* ScenarioExtesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42769D321B890A700C24E1B /* ScenarioExtesion.swift */; };
 		D42769D621B8A81D00C24E1B /* SpritesGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42769D521B8A81D00C24E1B /* SpritesGameScene.swift */; };
+		D42769D921B933A900C24E1B /* ScreenGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42769D821B933A900C24E1B /* ScreenGame.swift */; };
+		D42769DB21B9466B00C24E1B /* Fire.sks in Resources */ = {isa = PBXBuildFile; fileRef = D42769DA21B9466B00C24E1B /* Fire.sks */; };
+		D42769DE21B9493100C24E1B /* DerramaroGai.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D42769DD21B9493100C24E1B /* DerramaroGai.mp3 */; };
 		D4603DE8217E6C71008C8DA3 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4603DE7217E6C71008C8DA3 /* Sensor.swift */; };
 		D4603DEB217F32BD008C8DA3 /* GameOverScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4603DEA217F32BD008C8DA3 /* GameOverScreen.swift */; };
 		D4603DED217F3663008C8DA3 /* CurrentGameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4603DEC217F3663008C8DA3 /* CurrentGameScreen.swift */; };
@@ -43,6 +46,9 @@
 		D42769D121B825B200C24E1B /* SkyGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyGameScene.swift; sourceTree = "<group>"; };
 		D42769D321B890A700C24E1B /* ScenarioExtesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioExtesion.swift; sourceTree = "<group>"; };
 		D42769D521B8A81D00C24E1B /* SpritesGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpritesGameScene.swift; sourceTree = "<group>"; };
+		D42769D821B933A900C24E1B /* ScreenGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenGame.swift; sourceTree = "<group>"; };
+		D42769DA21B9466B00C24E1B /* Fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Fire.sks; sourceTree = "<group>"; };
+		D42769DD21B9493100C24E1B /* DerramaroGai.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = DerramaroGai.mp3; sourceTree = "<group>"; };
 		D4603DE7217E6C71008C8DA3 /* Sensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
 		D4603DEA217F32BD008C8DA3 /* GameOverScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScreen.swift; sourceTree = "<group>"; };
 		D4603DEC217F3663008C8DA3 /* CurrentGameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGameScreen.swift; sourceTree = "<group>"; };
@@ -84,6 +90,7 @@
 			children = (
 				D42769CC21B822FC00C24E1B /* Cloud.sks */,
 				D42769CD21B822FC00C24E1B /* Assets.xcassets */,
+				D42769DA21B9466B00C24E1B /* Fire.sks */,
 			);
 			path = Particules;
 			sourceTree = "<group>";
@@ -95,6 +102,22 @@
 				D42769D121B825B200C24E1B /* SkyGameScene.swift */,
 			);
 			path = Sky;
+			sourceTree = "<group>";
+		};
+		D42769D721B9338900C24E1B /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				D42769D821B933A900C24E1B /* ScreenGame.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		D42769DC21B9491800C24E1B /* Songs */ = {
+			isa = PBXGroup;
+			children = (
+				D42769DD21B9493100C24E1B /* DerramaroGai.mp3 */,
+			);
+			path = Songs;
 			sourceTree = "<group>";
 		};
 		D4603DE6217E6C4D008C8DA3 /* Sensors */ = {
@@ -162,6 +185,7 @@
 				D4D7B7582177BB9C0012B5CA /* Physics */,
 				D4D7B75621761E4E0012B5CA /* Scenes */,
 				D4603DE9217F3256008C8DA3 /* GameOverScreen */,
+				D42769DC21B9491800C24E1B /* Songs */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -178,6 +202,7 @@
 		D4D7B7572177BB8D0012B5CA /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				D42769D721B9338900C24E1B /* Screen */,
 				D42769D021B8250F00C24E1B /* Sky */,
 				D4603DE6217E6C4D008C8DA3 /* Sensors */,
 				D4D7B767217A2F230012B5CA /* Obstacles */,
@@ -281,8 +306,10 @@
 				D4D7B74B21761E030012B5CA /* Assets.xcassets in Resources */,
 				D42769CE21B822FC00C24E1B /* Cloud.sks in Resources */,
 				D42769CF21B822FC00C24E1B /* Assets.xcassets in Resources */,
+				D42769DB21B9466B00C24E1B /* Fire.sks in Resources */,
 				D4D7B74E21761E030012B5CA /* LaunchScreen.storyboard in Resources */,
 				D4D7B74221761E000012B5CA /* Actions.sks in Resources */,
+				D42769DE21B9493100C24E1B /* DerramaroGai.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +332,7 @@
 				D4D7B75C2177BBBF0012B5CA /* PhysicsEnum.swift in Sources */,
 				D4D7B74621761E000012B5CA /* GameViewController.swift in Sources */,
 				D4603DF4217F77D6008C8DA3 /* BonusGeneration.swift in Sources */,
+				D42769D921B933A900C24E1B /* ScreenGame.swift in Sources */,
 				D4603DEF217F4F66008C8DA3 /* Collisions.swift in Sources */,
 				D42769D221B825B200C24E1B /* SkyGameScene.swift in Sources */,
 				D4603DF2217F749E008C8DA3 /* BonusNodes.swift in Sources */,

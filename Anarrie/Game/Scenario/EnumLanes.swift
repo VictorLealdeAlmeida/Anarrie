@@ -7,9 +7,9 @@
 //
 
 enum LanesScale: Double{
-    case leftLane = -0.33
+    case leftLane = -0.38
     case centerLane = 0
-    case rightLane = 0.33
+    case rightLane = 0.38
 }
 
 enum ScaleNodeScenario: Double{

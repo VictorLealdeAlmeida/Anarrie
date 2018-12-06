@@ -41,7 +41,10 @@ extension GameScene{
         case 4:
             addChild(Bonfire(laneStart: laneStart))
         case 5:
-            addChild(Snake(laneStart: laneStart))
+            let snake = Snake(laneStart: laneStart)
+         //   snake.run(spriteThreeFrames(imageOne: "snake1", imageTwo: "snake2", imageThree: "snake3", time: 0.1))
+            addChild(snake)
+
         default:
             break
         }

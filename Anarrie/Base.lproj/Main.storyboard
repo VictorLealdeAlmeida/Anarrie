@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +20,95 @@
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbh-Uy-vid">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bandeiras" translatesAutoresizingMaskIntoConstraints="NO" id="P2u-KH-rFN">
+                                        <rect key="frame" x="0.0" y="99" width="375" height="102"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="102" id="Sz7-ae-euQ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxh-1m-IPd">
+                                        <rect key="frame" x="52.5" y="491.5" width="270" height="51"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="51" id="s9g-Be-m8G"/>
+                                            <constraint firstAttribute="width" constant="270" id="yMO-CA-Ln1"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="jogar novamente botao"/>
+                                        <connections>
+                                            <action selector="replay:" destination="BV1-FR-VrT" eventType="touchUpInside" id="DTo-mZ-afF"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PONTOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5J-k5-kDO">
+                                        <rect key="frame" x="84" y="345" width="207" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="ZID-BK-SGF"/>
+                                            <constraint firstAttribute="width" constant="207" id="gjI-LM-PYu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gii-Gd-6Ar">
+                                        <rect key="frame" x="84" y="294.5" width="207" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="207" id="fTr-IC-fXt"/>
+                                            <constraint firstAttribute="height" constant="45" id="x5J-sO-yEz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="56"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOQUE PARA NA TELA PARA COMEÇAR" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iy4-vi-f5o">
+                                        <rect key="frame" x="0.0" y="83.5" width="375" height="667"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.99074393510818481" blue="0.83203452825546265" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="iy4-vi-f5o" firstAttribute="width" secondItem="wbh-Uy-vid" secondAttribute="width" id="AsA-sZ-fp2"/>
+                                    <constraint firstItem="c5J-k5-kDO" firstAttribute="centerY" secondItem="wbh-Uy-vid" secondAttribute="centerY" multiplier="1.09" id="JII-3W-cXv"/>
+                                    <constraint firstItem="Zxh-1m-IPd" firstAttribute="centerY" secondItem="wbh-Uy-vid" secondAttribute="centerY" multiplier="1.55" id="JqQ-8v-Fks"/>
+                                    <constraint firstItem="iy4-vi-f5o" firstAttribute="centerY" secondItem="wbh-Uy-vid" secondAttribute="centerY" multiplier="1.25" id="KLT-zI-s17"/>
+                                    <constraint firstItem="P2u-KH-rFN" firstAttribute="centerY" secondItem="wbh-Uy-vid" secondAttribute="centerY" multiplier="0.45" id="YzO-EA-AeD"/>
+                                    <constraint firstItem="P2u-KH-rFN" firstAttribute="leading" secondItem="wbh-Uy-vid" secondAttribute="leading" id="Z9h-C6-NVx"/>
+                                    <constraint firstItem="iy4-vi-f5o" firstAttribute="height" secondItem="wbh-Uy-vid" secondAttribute="height" id="a3x-MX-DfE"/>
+                                    <constraint firstItem="Gii-Gd-6Ar" firstAttribute="centerY" secondItem="wbh-Uy-vid" secondAttribute="centerY" multiplier="0.95" id="agR-03-GaJ"/>
+                                    <constraint firstItem="Gii-Gd-6Ar" firstAttribute="centerX" secondItem="wbh-Uy-vid" secondAttribute="centerX" id="gk3-GL-eH9"/>
+                                    <constraint firstItem="Zxh-1m-IPd" firstAttribute="centerX" secondItem="wbh-Uy-vid" secondAttribute="centerX" id="sHc-O9-kIr"/>
+                                    <constraint firstItem="iy4-vi-f5o" firstAttribute="centerX" secondItem="wbh-Uy-vid" secondAttribute="centerX" id="tjd-5U-H8f"/>
+                                    <constraint firstAttribute="trailing" secondItem="P2u-KH-rFN" secondAttribute="trailing" id="xF9-eY-axH"/>
+                                    <constraint firstItem="c5J-k5-kDO" firstAttribute="centerX" secondItem="wbh-Uy-vid" secondAttribute="centerX" id="yrf-GE-tT4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="niP-RQ-1xT" firstAttribute="top" secondItem="wbh-Uy-vid" secondAttribute="bottom" id="Ql2-Js-QxL"/>
+                            <constraint firstAttribute="trailing" secondItem="wbh-Uy-vid" secondAttribute="trailing" id="Wnr-Ew-EVa"/>
+                            <constraint firstItem="wbh-Uy-vid" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="top" id="Z1K-A2-Ktf"/>
+                            <constraint firstItem="wbh-Uy-vid" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" id="bbk-6k-nek"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="points" destination="c5J-k5-kDO" id="oC1-jC-5Qd"/>
+                        <outlet property="replayButton" destination="Zxh-1m-IPd" id="tNE-aJ-1x2"/>
+                        <outlet property="scoreResult" destination="Gii-Gd-6Ar" id="Jju-I6-s4G"/>
+                        <outlet property="startLabel" destination="iy4-vi-f5o" id="FHN-aA-rv5"/>
+                        <outlet property="viewScreen" destination="wbh-Uy-vid" id="RTE-OS-V7t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="141.59999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bandeiras" width="750" height="238"/>
+        <image name="jogar novamente botao" width="556" height="100"/>
+    </resources>
 </document>

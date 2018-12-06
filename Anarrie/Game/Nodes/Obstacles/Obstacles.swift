@@ -47,6 +47,7 @@ class Cactus: Obstacle{
         let texture = SKTexture(imageNamed: "cacto")
         super.init(texture: texture, name: "cactus", laneStart: laneStart)
         
+        super.zRotation = CGFloat(Float.pi * Float.random(in: 0 ... 2))
         super.size = CGSize(width: 120, height: 80)
     }
     
@@ -62,6 +63,13 @@ class Bonfire: Obstacle{
     init(laneStart: LanesScale) {
         let texture = SKTexture(imageNamed: "fogueira")
         super.init(texture: texture, name: "bonfire", laneStart: laneStart)
+        
+        let fire = SKEmitterNode(fileNamed: "Fire")
+        fire?.zPosition = 10
+        fire?.position = CGPoint(x: 0, y: 0)
+        self.addChild(fire!)
+        
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -75,8 +83,9 @@ class Snake: Obstacle{
     var currentLane: LanesScale!
     
     init(laneStart: LanesScale) {
-        let texture = SKTexture(imageNamed: "cobra")
+        let texture = SKTexture(imageNamed: "snake1")
         super.init(texture: texture, name: "snake", laneStart: laneStart)
+        super.size = CGSize(width: 60, height: 120)
         
         self.currentLane = laneStart
 

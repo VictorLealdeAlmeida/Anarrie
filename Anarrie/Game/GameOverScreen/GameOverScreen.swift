@@ -13,14 +13,17 @@ extension GameScene{
     func createGameOverScreen(){
         self.screenGameOver.name = "screenGameOver"
         addChild(self.screenGameOver)
+        
+        if let scoreLabel = currentGameScreen.childNode(withName: "scoreLabel") as? SKLabelNode{
+            if let score = scoreLabel.text{
+                self.gameViewController.showGameOverScreen(score: score)
+            }
+        }
+
+        
+        
     }
     
-    func createElementsGameOver(){
-    }
-    
-    func replay(){
-       // self.gameViewController.tapReplay()
-    }
     
     
 

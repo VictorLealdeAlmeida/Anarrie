@@ -12,17 +12,34 @@ import GameplayKit
 
 class GameViewController: UIViewController {
 
-    var gameScene = GameScene(fileNamed:"GameScene")
+    @IBOutlet weak var viewScreen: UIView!
     
+    @IBOutlet weak var replayButton: UIButton!
+    @IBOutlet weak var scoreResult: UILabel!
+    @IBOutlet weak var points: UILabel!
+    @IBOutlet weak var startLabel: UILabel!
+    
+    
+    var gameScene = GameScene(fileNamed:"GameScene")
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
        
         createScene()
         createUserInputs()
-       
+        setsView()
+    }
+    
+    func setsView(){
+        
+        self.replayButton.isHidden = true
+        self.scoreResult.isHidden = true
+        self.points.isHidden = true
+        
     }
 
+    
     func createScene(){
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
@@ -32,10 +49,10 @@ class GameViewController: UIViewController {
             
             view.presentScene(scene)
             
-            view.ignoresSiblingOrder = true
-            view.showsFPS = true
-            view.showsNodeCount = true
-            view.showsPhysics = true
+            view.ignoresSiblingOrder = false
+            view.showsFPS = false
+            view.showsNodeCount = false
+            view.showsPhysics = false
         }
     }
     
@@ -95,16 +112,38 @@ extension GameViewController{
         
         
         if self.gameScene?.screenGameOver.name != nil{
-            self.replay()
+            
         }else if self.gameScene?.currentGameScreen.name != nil{
             if Int.random(in: 0 ... 5) == 0{
                 self.gameScene?.removeSky()
             }
         }else{
+            self.viewScreen.fadeOut()
             self.gameScene?.play()
         }
         
         
+    }
+    
+    @IBAction func replay(_ sender: UIButton) {
+        self.replayButton.isHidden = true
+        self.scoreResult.isHidden = true
+        self.points.isHidden = true
+        self.startLabel.isHidden = false
+        
+        self.replay()
+    }
+    
+    func showGameOverScreen(score: String){
+        
+        self.replayButton.isHidden = false
+        self.scoreResult.isHidden = false
+        self.points.isHidden = false
+        self.startLabel.isHidden = true
+        
+        self.scoreResult.text = score
+        
+        self.viewScreen.fadeIn()
     }
     
     func setTap(selector: Selector?){
@@ -112,6 +151,25 @@ extension GameViewController{
         tapGesture.numberOfTapsRequired = 1
         tapGesture.numberOfTouchesRequired = 1
         view.addGestureRecognizer(tapGesture)
+    }
+    
+    
+    
+}
+
+
+public extension UIView {
+    
+    func fadeIn(duration: TimeInterval = 1.0) {
+        UIView.animate(withDuration: duration, animations: {
+            self.alpha = 1.0
+        })
+    }
+    
+    func fadeOut(duration: TimeInterval = 1.0) {
+        UIView.animate(withDuration: duration, animations: {
+            self.alpha = 0.0
+        })
     }
     
 }

@@ -17,7 +17,6 @@ extension GameScene{
         scoreLabel?.removeAction(forKey: "countScore")
         
         scoreLabel?.run(SKAction.sequence([
-            SKAction.move(to: CGPoint(x: 0, y: 0), duration: 2),
             SKAction.wait(forDuration: 1),
             SKAction.run{
                 self.createGameOverScreen()
@@ -32,6 +31,14 @@ extension GameScene{
     func collisionPlayerBonusNode(bonusNode: SKSpriteNode){
         bonusNode.removeFromParent()
         
+        if let scoreLabel = currentGameScreen.childNode(withName: "scoreLabel") as? SKLabelNode{
+            if let score = scoreLabel.text{
+                
+                let addScore = Int(score)!
+                scoreLabel.text = String(addScore + 10)
+                
+            }
+        }
         
     }
     

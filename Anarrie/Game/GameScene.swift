@@ -18,16 +18,21 @@ class GameScene: SKScene {
     let screenGameOver = SKSpriteNode()
     let skyScreen = SKSpriteNode()
     
+    let backgroundMusic = SKAudioNode(fileNamed: "DerramaroGai.mp3")
+
+    
 
     
     override func sceneDidLoad() {
         
-     
-        
 
-        
-        startLoopingBackground()
+     
+        prePlay()
        
+    }
+    
+    func prePlay(){
+        self.startLoopingBackground()
     }
     
     func play(){
@@ -36,6 +41,9 @@ class GameScene: SKScene {
         self.createObstacles()
         
         self.createGameCurrent()
+        
+        backgroundMusic.autoplayLooped = true
+        addChild(backgroundMusic)
         
     }
     
@@ -58,8 +66,8 @@ class GameScene: SKScene {
     }
     
     func createSkyLoterry(){
-        if Int.random(in: 0 ... 1) == 0{
-           // self.createSky()
+        if Int.random(in: 0 ... 30) == 0{
+            self.createSky()
         }
         
         

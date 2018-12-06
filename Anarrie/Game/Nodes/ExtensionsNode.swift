@@ -17,7 +17,7 @@ extension SKNode{
     }
     
     func widthScreen() -> CGFloat{
-        return  UIScreen.main.nativeBounds.width
+        return UIScreen.main.nativeBounds.width
     }
     
     func scaleHeight(scale: Double) -> CGFloat{
