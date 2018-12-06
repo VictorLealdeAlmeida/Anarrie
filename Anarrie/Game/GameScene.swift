@@ -18,10 +18,15 @@ class GameScene: SKScene {
     let screenGameOver = SKSpriteNode()
     let skyScreen = SKSpriteNode()
     
+
     
     override func sceneDidLoad() {
         
-    
+     
+        
+
+        
+        startLoopingBackground()
        
     }
     
@@ -31,8 +36,6 @@ class GameScene: SKScene {
         self.createObstacles()
         
         self.createGameCurrent()
-        
-        self.createSky()
         
     }
     
@@ -54,7 +57,7 @@ class GameScene: SKScene {
     
     func createSkyLoterry(){
         if Int.random(in: 0 ... 1) == 0{
-            self.createSky()
+           // self.createSky()
         }
         
         

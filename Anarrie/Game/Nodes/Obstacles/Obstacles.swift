@@ -44,8 +44,10 @@ class Obstacle: SKSpriteNode{
 class Cactus: Obstacle{
     
     init(laneStart: LanesScale) {
-        let texture = SKTexture(imageNamed: "cactoo")
+        let texture = SKTexture(imageNamed: "cacto")
         super.init(texture: texture, name: "cactus", laneStart: laneStart)
+        
+        super.size = CGSize(width: 120, height: 80)
     }
     
     required init?(coder aDecoder: NSCoder) {
