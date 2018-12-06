@@ -15,17 +15,19 @@ class Player: SKSpriteNode{
     
     init() {
         let texture = SKTexture(imageNamed: "lui1")
-        let size = CGSize(width: 120, height: 120)
+        let size = CGSize(width: 200, height: 200)
         super.init(texture: texture, color: UIColor.clear, size: size)
         
         self.name = "player"
         self.position = CGPoint(x: widthCenter(), y: scaleHeight(scale: ScaleNodeScenario.playerHeight.rawValue))
         
-        self.physicsBody = SKPhysicsBody(circleOfRadius: self.size.width/2)
+        self.physicsBody = SKPhysicsBody(circleOfRadius: self.size.width/3)
         
         self.physicsBody?.categoryBitMask = PhysicsCategory.Player.rawValue
         self.physicsBody?.contactTestBitMask = PhysicsCategory.Obstacle.rawValue
         self.physicsBody?.collisionBitMask = PhysicsCategory.None.rawValue
+        
+        
     }
     
     required init?(coder aDecoder: NSCoder) {

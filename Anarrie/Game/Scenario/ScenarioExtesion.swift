@@ -18,31 +18,25 @@ extension GameScene{
         
         let background:SKSpriteNode = SKSpriteNode(imageNamed: "raias")
         background.setScale(0.5)
+        background.zPosition = -200
         background.position = CGPoint(x: 0, y: background.size.height - 10)
         
         
 
         addChild(background)
     
-        
+        let duration = Speeds.obstacles.rawValue * 1.1
         
         background.run(SKAction.sequence([
-            SKAction.moveTo(y: 0, duration: 5),
+            SKAction.moveTo(y: 0, duration: duration),
             SKAction.run({self.startLoopingBackground()}),
-            SKAction.moveTo(y: -background.size.height, duration: 5),
+            SKAction.moveTo(y: -background.size.height, duration: duration),
             SKAction.removeFromParent()
             ]))
         
         
         
-        
-       /* let move:SKAction = SKAction.moveBy(x: 0, y: -loopingBG2.size.height, duration: 20)
-        let moveBack:SKAction = SKAction.moveBy(x: 0, y: loopingBG2.size.height, duration: 0)
-        let seq:SKAction = SKAction.sequence([move, moveBack])
-        let `repeat`:SKAction = SKAction.repeatForever(seq)
-        
-        loopingBG.run(`repeat`)
-        loopingBG2.run(`repeat`)*/
+
     }
     
     func resetLoopingBackground(){

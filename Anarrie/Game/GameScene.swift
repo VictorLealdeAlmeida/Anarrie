@@ -41,6 +41,8 @@ class GameScene: SKScene {
     
     func createNodes(){
         self.addChild(player)
+        player.run(spriteThreeFrames(imageOne: "player1", imageTwo: "player2", imageThree: "player3", time: 0.1))
+        
         self.addChild(Sensor(name: "sensorSnake", hight: ScaleNodeScenario.sensorSnakeHeight, phyCategory: PhysicsCategory.SensorSnake))
         self.addChild(Sensor(name: "sensorBirth", hight: ScaleNodeScenario.sensorBirthObstacle, phyCategory: PhysicsCategory.SensorBirth))
     }
